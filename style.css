@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+ 
+  color: white;
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: 'poppins',sans-serif;
+}
+body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background-color: black;
+
+}
+.contentbx:hover {
+    background: green;
+}
+h2 {
+    font-size: 48px;
+    padding-bottom: 20px;
+}
+.accordion {
+    max-width: 800px;
+}
+.accordion .contentbx {
+    position: relative;
+    margin: 10px 20px;
+}
+.accordion .contentbx .label {
+    position: relative;
+    padding: 10px;
+    background-color: rgba(45, 45, 45, 1);
+    cursor: pointer;
+}
+.accordion .contentbx .label::before {
+    content: '+';
+    position: absolute;
+    top: 10%;
+    right: 20px;
+    transform : translate(-50%);
+    font-size: 1.5em;
+   
+
+}
+.accordion .contentbx.active .label::before {
+  content: '-';
+}
+.accordion .contentbx .content {
+    position: relative;
+  
+
+   
+    background:#414141 ;
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s;
+    overflow-y: auto;
+}
+.accordion .contentbx.active  .content  {
+    height: 150px;
+    padding: 10px;
+}
